@@ -1,4 +1,4 @@
-// @ts-nocheck -- game code uses loose dynamic state for speed of iteration
+// @ts-nocheck
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { drawSprite } from "./sprites";
 import { sfx } from "./audio";

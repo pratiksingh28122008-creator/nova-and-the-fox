@@ -1,4 +1,4 @@
-// @ts-nocheck -- game code uses loose dynamic state for speed of iteration
+// @ts-nocheck
 export const PAL: Record<string, string> = {
   w: "#eef6ff", g: "#9fb3c8", d: "#4a5a78", v: "#38d9f0", k: "#101426", o: "#ff8a3d",
   y: "#ffd23f", r: "#ff4d5e", b: "#2b6bff", p: "#ff9ec7", c: "#7cf7c9", m: "#b07cff", n: "#6b3b1f", e: "#1e2a44",
