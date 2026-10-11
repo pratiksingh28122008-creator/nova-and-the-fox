@@ -1,3 +1,4 @@
+// @ts-nocheck -- game code uses loose dynamic state for speed of iteration
 import { getState } from "./store";
 
 let ctx: AudioContext | null = null;

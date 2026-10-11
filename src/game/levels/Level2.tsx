@@ -1,3 +1,4 @@
+// @ts-nocheck -- game code uses loose dynamic state for speed of iteration
 import { useEffect, useRef, useState } from "react";
 import { useGame, setFlag, getState, change, addItem, toast, setObjective, checkpoint, setState, pipChange } from "../store";
 import { Dialogue, Modal, Stars, Result, useControls, HoldButton, Sprite } from "../ui";

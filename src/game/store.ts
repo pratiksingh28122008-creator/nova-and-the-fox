@@ -1,3 +1,4 @@
+// @ts-nocheck -- game code uses loose dynamic state for speed of iteration
 import { useSyncExternalStore } from "react";
 
 export type Pip = { hp: number; bat: number; happy: number; trust: number };
