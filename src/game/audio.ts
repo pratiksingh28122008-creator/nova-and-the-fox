@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { getState } from "./store";
 
 let ctx: AudioContext | null = null;

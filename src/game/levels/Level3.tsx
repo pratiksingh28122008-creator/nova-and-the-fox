@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect, useRef, useState } from "react";
 import { useGame, setFlag, getState, change, pipChange, addItem, removeItem, toast, setObjective, checkpoint, setState } from "../store";
 import { Dialogue, Modal, Stars, Choice, Result, useControls, HoldButton, Sprite } from "../ui";

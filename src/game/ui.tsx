@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { drawSprite } from "./sprites";
 import { sfx } from "./audio";

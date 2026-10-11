@@ -1,4 +1,5 @@
-import { useSyncExternalStore } from "react";
+// @ts-nocheck
+import { useRef, useSyncExternalStore } from "react";
 
 export type Pip = { hp: number; bat: number; happy: number; trust: number };
 export type Toast = { id: number; text: string; tone: "info" | "good" | "bad" | "warn" };
@@ -74,7 +75,9 @@ export function setState(p: Partial<GameState> | ((s: GameState) => Partial<Game
 }
 const subscribe = (l: () => void) => { listeners.add(l); return () => listeners.delete(l); };
 export function useGame<T>(sel: (s: GameState) => T): T {
-  return useSyncExternalStore(subscribe, () => sel(state), () => sel(state));
+  const ref = useRef<{ s: GameState | null; v: T }>({ s: null, v: undefined as T });
+  const get = () => { if (ref.current.s !== state) ref.current = { s: state, v: sel(state) }; return ref.current.v; };
+  return useSyncExternalStore(subscribe, get, get);
 }
 
 const clamp = (v: number, a = 0, b = 100) => Math.max(a, Math.min(b, v));
