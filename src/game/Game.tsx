@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   useGame, setState, getState, change, pipChange, toast, ITEMS, RECIPES, CAPACITY, invCount, useItem, craft,
   saveGame, loadGame, hasSave, newGame, continueFromCheckpoint, removeItem,
@@ -155,7 +155,8 @@ function Pause() {
 }
 
 function Title() {
-  const canLoad = typeof window !== "undefined" && hasSave();
+  const [canLoad, setCanLoad] = useState(false);
+  useEffect(() => setCanLoad(hasSave()), []);
   return (
     <div className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden p-4 text-center">
       <Stars speed={0.6} meteors />

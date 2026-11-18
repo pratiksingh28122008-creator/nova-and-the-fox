@@ -1,0 +1,2 @@
+- [ ] Create a runnable Godot version of Lost in the Cosmos first.
+- [ ] Return to browser-game verification and fixes after Godot delivery.
